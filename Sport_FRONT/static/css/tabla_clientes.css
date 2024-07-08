@@ -1,0 +1,193 @@
+:root {
+    --main-color1: #3C60DF;
+    --main-color2: #FF4550;
+    --main-color3: #605b64;
+    --main-color4: #FBB90D;
+    --main-color5: #E67555;
+    --main-color6: #CFCB88;
+    --body-fonts-1: "Oswald",  sans-serif;
+    --body-fonts-2: "Cooper-Hewitt",  sans-serif;
+  }
+
+body {
+    background-image: linear-gradient(43deg, #fbb90d 0%, #e67555 46%, #cc89ff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+/* LOGIN */
+
+#container_login {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Cooper-Hewitt",  sans-serif;
+    font-weight: 100;
+
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    background-color: #3C60DF;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: "Oswald",  sans-serif;
+    font-weight: 100;
+}
+
+/* TABLA DE CONSULTAS */
+
+section div img {
+    width: 40;
+    height: 70px;
+    margin-bottom: -30px;
+}
+
+#container_consultasclientes {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    display: none; 
+}
+
+h3 {
+    font-family: "Oswald",  sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+
+  .nuevo { 
+    background-color: #8aff92;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: .8em;
+    font-family: "Cooper-Hewitt", sans-serif;
+    width: 75px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+  #table_clientes {
+    width: 90vw;
+    border: .25px solid black;
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: "Cooper-Hewitt",  sans-serif;
+    font-weight: 100;
+}
+
+.head_clientes {
+    background-color: black;
+    color: white;
+}
+
+.head_clientes th {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center; 
+    border: .25px solid black; 
+}
+
+#table_clientes th:nth-child(1),
+#table_clientes td:nth-child(1),
+#table_clientes th:nth-child(5),
+#table_clientes td:nth-child(5),
+#table_clientes th:nth-child(7),
+#table_clientes td:nth-child(7) {
+    width: 5%; 
+}
+
+#table_clientes th:nth-child(4) {
+    width: 7%; 
+}
+
+#table_clientes th:nth-child(3) {
+    width: 15%; 
+}
+
+#table_clientes th:nth-child(8),
+#table_clientes td:nth-child(8) {
+    width: 10%; 
+}
+
+
+.boton_eliminar {
+    background-color: #FF4550;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Cooper-Hewitt", sans-serif;
+    width: 75px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.boton_editar {
+    background-color: #3C60DF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Cooper-Hewitt", sans-serif;
+    width: 75px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 7px;
+}
+
+.head_clientes th, .row_clientes td {
+    border: .25px solid red;
+    text-align: center;
+    padding: 10px; 
+}
+
+.row_clientes td {
+    border: .25px solid green;
+    font-size: .8em;
+    word-wrap: break-word; 
+}
+
+

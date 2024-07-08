@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/tabla_clientes.css">
+    <link rel="stylesheet" href="../../static/css/ingresar_cliente.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../../static/img/iconos/s3favicon.ico" type="image/x-icon">
+
+    <title>Admin - Modificar cliente</title>
+</head>
+<body>
+
+    <main>
+        <section  class="container-form">
+
+            <div>
+                <a href="tabla_clientes.html"><img src="../../static/img/Logos/s3favicon.png" alt="logoinstitucional"></a>
+            </div>
+
+            <div>
+                <h3>MODIFICAR CLIENTE</h3>
+            </div>
+
+            <div>
+                <form>
+                    <div class="entrada">
+                        <label for="id">ID</label>
+                        <input type="number" name="id" id="id" disabled>
+                    </div>
+            
+                    <div class="entrada">
+                        <label for="nombre">Nombre y apellido: </label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="mail">Email: </label>
+                        <input type="email" name="mail" id="mail">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="telefono">Teléfono: </label>
+                        <input type="number" name="telefono" id="telefono">
+                    </div>
+
+                    <div class="entrada">
+                        <div class="entrada">Género:</div>
+                        <input type="radio" name="genero" id="mujer" value="Mujer" >
+                        <label for="mujer">Mujer</label>
+
+                        <input type="radio" name="genero" id="hombre" value="Hombre" >
+                        <label for="hombre">Hombre</label>
+
+                        <input type="radio" name="genero" id="otro" value="Otro" >
+                        <label for="otro">Otro</label>
+                    </div>
+                    <div class="entrada">
+                        <div class="entrada">Servicios:</div>
+                        <input type="checkbox" name="servicios" id="boxeo" value="boxeo">
+                        <label for="boxeo">Boxeo</label>
+    
+                        <input type="checkbox" name="servicios" id="funcional" value="funcional">
+                        <label for="funcional">Funcional</label>
+    
+                        <input type="checkbox" name="servicios" id="pilates" value="pilates">
+                        <label for="pilates">Pilates</label>
+    
+                        <input type="checkbox" name="servicios" id="spinning" value="spinning">
+                        <label for="spinning">Spinning</label>
+    
+                        <input type="checkbox" name="servicios" id="yoga" value="yoga">
+                        <label for="yoga">Yoga</label>
+    
+                        <input type="checkbox" name="servicios" id="zumba" value="zumba">
+                        <label for="zumba">Zumba</label>
+                    </div>
+                    
+                    <div class="entrada">
+                        <div class="entrada">Plan:</div>
+                        <input list="lista-plan" id="plan" name="plan" required>
+                        <datalist id="lista-plan">
+                        <option value="Diamante">Diamante</option>
+                        <option value="Oro">Oro</option>
+                        <option value="Plata">Plata</option>
+                        <option value="Bronce">Bronce</option>
+                        </datalist>
+                    </div>
+
+                    <div class="entrada">
+                        <label class="formnegrita" for="consulta-textarea">Observaciones/Consulta:</label>
+                        <textarea name="consulta" id="consulta-textarea"></textarea>
+                    </div>
+                    
+                    <div class="entrada">
+                        <label class="formnegrita" for="aptofisico" >¿Posee apto físico?</label>
+                        <input list="tieneAptoFisico" id="aptofisico" name="aptofisico" required>
+                        <datalist id="tieneAptoFisico">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                        </datalist>
+                    </div>
+                    
+                    <button class="modificar" type="button" onclick="modificar()">Modificar</button>
+                </form>
+          
+          
+              </div>
+
+        </section>
+    </main>
+
+
+    <script src="../../static/js/editar_cliente.js"></script>
+    <script src="../../static/js/datos_editar.js"></script>
+</body>
+</html>

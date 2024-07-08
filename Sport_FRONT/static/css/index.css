@@ -1,0 +1,684 @@
+/* --------------------------------------------------------------------------------
+GENERAL
+-------------------------------------------------------------------------------- */
+
+*{
+    padding: 0px;
+    margin: 0px;;
+}
+
+:root {
+  --main-color1: #3C60DF;
+  --main-color2: #FF4550;
+  --main-color3: #CC89FF;
+  --main-color4: #FBB90D;
+  --main-color5: #E67555;
+  --main-color6: #CFCB88;
+  --body-fonts-1: "Oswald",  sans-serif;
+  --body-fonts-2: "Cooper-Hewitt",  sans-serif;
+}
+
+/* --main-color1: rgba(60, 96, 223, 1);
+--main-color2: rgba(255, 69, 80, 1);
+--main-color3: rgba(204, 137, 255, 1);
+--main-color4: rgba(251, 185, 13, 1);
+--main-color5: rgba(230, 117, 85, 1);
+--main-color6: rgba(207, 203, 136, 1); */
+
+body{
+  /* background-color: white; */
+  background: linear-gradient(45deg, #ffffff 0%, #FFF6F6 95%);
+}
+
+/* --------------------------------------------------------------------------------
+HEADER
+-------------------------------------------------------------------------------- */
+
+header {
+    display: flex;
+    z-index: 1000;
+    width: 100vw;
+    height: 10vh;
+    background: linear-gradient(45deg, #ff4551 0%, #B33039 95%);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3vw;   
+    border-bottom: .5px solid black;
+}
+
+.menu-navegacion{
+  padding-right: 7vw;
+}
+
+.menu-navegacion a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  margin: 0 20px;
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 100;
+}
+
+.menu-navegacion a:hover {
+  color: var(--main-color4);
+}
+
+#logo{
+  height: 80px;
+  width: 120px;
+}
+
+/* --------------------------------------------------------------------------------
+BODY
+-------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------
+SECTION 1 - BANNER
+-------------------------------------------------------------------------------- */
+.oculto{
+  display: none;
+}
+
+#banner {
+    width: 94vw;
+    height: 86vh;
+    background-image: url(../img/banners/bannerindex.webp);
+    background-size: cover;
+    margin-top: 12vh;
+    margin-bottom: 3vh;
+    position: relative;
+    left: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border: 1px solid black;
+}
+
+#naming img {
+  width: 600px;
+  margin-bottom: -50px;
+}
+
+#bajada {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 3em;
+  text-shadow: 1px 1px 1px black;
+  color: var(--main-color4);
+  margin-bottom: 150px;
+  position: relative;
+  left: 25px;
+}
+
+
+/* --------------------------------------------------------------------------------
+SECTION 2 - SERVICIOS
+-------------------------------------------------------------------------------- */
+
+#container-s2{
+    display: grid;
+    grid-template-columns: 28% 28% 28%;
+    grid-template-rows: 450px 450px;
+    row-gap: 2vh;
+    column-gap: 5vw;
+    justify-content: center;
+    align-items: center;  
+}
+
+#container-s2 a{
+  color: black;
+}
+
+#container-s2 a:hover{
+  color: var(--main-color2);
+}
+
+.imagenes {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.texto-imagenes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255, .7);
+  border-radius: 4%;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: var(--body-fonts-1);
+  font-weight: 300;
+}
+
+/* ----------------------- ITEMS ----------------------- */ 
+
+
+#item0 h3 {
+  font-family: var(--body-fonts-1);
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+#item1 {
+  background-image: url(../img/actividades/boxeo/boxeo1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  border: 1px solid black;
+
+}
+
+#item1:hover{
+  animation-name: transicion-boxeo;
+  animation-duration: 15s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}     
+
+@keyframes transicion-boxeo {
+  0%{background-image: url('../img/actividades/boxeo/boxeo1.jpg');}
+  20%{background-image: url('../img/actividades/boxeo/boxeo2.jpg');}
+  40%{background-image: url('../img/actividades/boxeo/boxeo3.jpg');}
+  60%{background-image: url('../img/actividades/boxeo/boxeo4.jpg');}
+  80%{background-image: url('../img/actividades/boxeo/boxeo5.jpg');}   
+}
+  
+
+#item2 {
+  background-image: url(../img/actividades/funcional/funcional1.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  border: 1px solid black;
+
+}
+     
+#item2:hover{
+  animation-name: transicion-funcional;
+  animation-duration: 15s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+}     
+@keyframes transicion-funcional {
+    0%{background-image: url('../img/actividades/funcional/funcional1.png');}
+    20%{background-image: url('../img/actividades/funcional/funcional2.png');}
+    40%{background-image: url('../img/actividades/funcional/funcional3.png');}
+    60%{background-image: url('../img/actividades/funcional/funcional4.png');}
+    80%{background-image: url('../img/actividades/funcional/funcional5.png');}
+}
+  
+ #item3 {
+  background-image: url(../img/actividades/pilates/pilates1.jpg);
+  background-size: cover;
+  background-position:initial;
+  width: 100%;
+  height: 400px;
+  border: 1px solid black;
+}
+
+  #item3:hover{
+  animation-name: transicion-pilates;
+  animation-duration: 15s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+}     
+@keyframes transicion-pilates {
+  0%{background-image: url('../img/actividades/pilates/pilates1.jpg');}
+  20%{background-image: url('../img/actividades/pilates/pilates2.jpg');}
+  40%{background-image: url('../img/actividades/pilates/pilates3.jpg');}
+  60%{background-image: url('../img/actividades/pilates/pilates4.jpg');}
+  80%{background-image: url('../img/actividades/pilates/pilates5.jpg');}
+}
+
+#item4 {
+  background-image: url(../img/actividades/spining/spining1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  border: 1px solid black;
+}
+
+#item4:hover{
+  animation-name: transicion-spining;
+  animation-duration: 15s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+}     
+@keyframes transicion-spining {
+  0%{background-image: url('../img/actividades/spining/spining1.jpg');}
+  20%{background-image: url('../img/actividades/spining/spining2.jpg');}
+  40%{background-image: url('../img/actividades/spining/spining3.jpg');}
+  60%{background-image: url('../img/actividades/spining/spining4.jpg');}
+  80%{background-image: url('../img/actividades/spining/spining5.jpg');}
+}
+  
+#item5 {
+  background-image: url(../img/actividades/yoga/yoga1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px;
+  border: 1px solid black;
+}
+
+#item5:hover{
+  animation-name: transicion-yoga;
+  animation-duration: 15s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+}     
+
+@keyframes transicion-yoga {
+  0%{background-image: url('../img/actividades/yoga/yoga1.jpg');}
+  20%{background-image: url('../img/actividades/yoga/yoga2.jpg');}
+  40%{background-image: url('../img/actividades/yoga/yoga3.jpg');}
+  60%{background-image: url('../img/actividades/yoga/yoga4.jpg');}
+  80%{background-image: url('../img/actividades/yoga/yoga5.jpg');}
+}     
+  
+#item6 {
+  background-image: url(../img/actividades/zumba/zumba1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: auto;
+  height: 400px;
+  border: 1px solid black;
+}
+
+#item6:hover{
+  animation-name: transicion-zumba;
+  animation-duration: 15s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
+  animation-timing-function:linear;
+}     
+
+@keyframes transicion-zumba {
+  0%{background-image: url('../img/actividades/zumba/zumba1.jpg');}
+  20%{background-image: url('../img/actividades/zumba/zumba2.jpg');}
+  40%{background-image: url('../img/actividades/zumba/zumba3.jpg');}
+  60%{background-image: url('../img/actividades/zumba/zumba4.jpg');}
+  80%{background-image: url('../img/actividades/zumba/zumba5.jpg');}
+}     
+
+/* ----------------------- ITEMS ----------------------- */ 
+
+/* --------------------------------------------------------------------------------
+SECTION 3 - CONSULTAS 
+-------------------------------------------------------------------------------- */
+
+#consultas {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  border: 1px solid black;
+  width: 93vw;
+  margin-top: 15px;
+  margin-left: 3vw;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: linear-gradient(45deg, #3c5fde 0%, #273E91 95%);
+}
+
+#consultas-titulo {
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 70px;
+  margin-left: 12%;
+} 
+
+#consultas-titulo h3{
+  text-align: left;
+  font-size: 3rem;
+  font-family: var(--body-fonts-1);
+  font-weight: 400;
+}
+
+#consultas-left > p {
+  font-family: var(--body-fonts-2);
+  font-size: 1.5em;
+  font-weight: 100;
+  margin-left: 12%;
+}
+
+#consultas-right{
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+  padding-left: 50px;
+}
+
+#campo-mail, #campo-consulta, #campo-enviar {
+  margin-top: 10px;
+}
+
+#campo-nombre input {
+  border: 1px solid red;
+  height: 30px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-mail input {
+  border: 1px solid red;
+  height: 30px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-consulta textarea {
+  border: 1px solid red;
+  height: 100px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-enviar input {
+  background-color: #FF4550;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 50px;
+  padding: 3px;
+}
+
+#campo-enviar input[type="submit"] {
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+}
+
+/*--------------------------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------------------------- */
+
+footer {
+  display: grid;
+  width: 93vw;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1;
+  margin-top: 30px;
+  margin-left: 3vw;
+  margin-bottom: 20px;
+  font-family: var(--body-fonts-2);
+  border: 1px solid black;
+  /* background-color: var(--main-color4); */
+  background: linear-gradient(45deg, #FAB70C 0%, #CC950A 95%);
+}
+
+#footer-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 20px 0px 20px 80px;
+}
+
+#footer-left p {
+  font-weight: 100;
+}
+
+#footer-left input{
+  font-family: var(--body-fonts-1);
+  font-weight: 300;
+  border: 1px solid red;
+  height: 30px;
+  width: 250px;
+  margin-top: 10px;
+}
+
+#footer-left input::placeholder {
+  font-family: var(--body-fonts-1);
+  padding: 5px;
+}
+
+#footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: right;
+  padding-right: 80px;
+  font-family: var(--body-fonts-2);
+  font-weight: 300;
+}
+
+#footer-right-mail::before {
+  content: url(../img/iconos/footer/mail.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+
+#footer-right-cel::before {
+  content: url(../img/iconos/footer/tel.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+
+#footer-right-ubic::before {
+  content: url(../img/iconos/footer/ubicacion.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+
+/* --------------------------------------------------------------------------------
+CRÊDITOS
+-------------------------------------------------------------------------------- */
+
+#creditos {
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+  font-size: .7rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------------
+FUENTES
+-------------------------------------------------------------------------------- */
+
+.oswald{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* --------------------------------------------------------------------------------
+MEDIA QUERYES - 700
+-------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 700px){
+
+.menu-navegacion a {
+  margin: 0 5px;
+  font-size: 1.3em;
+}
+
+#naming img {
+  width: 400px;
+}
+
+#bajada {
+  font-size: 1.75em;
+}
+
+#item0 h3{
+  margin-bottom: 30px;
+}
+  
+#container-s2{
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 250px 250px;
+}
+
+.imagenes {
+  height: 250px;
+}
+
+.texto-imagenes {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#item1, #item2, #item3, #item4, #item5, #item6 {
+  height: 250px;
+}
+
+/* CONSULTAS */
+
+#consultas {
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  row-gap: 30px;
+  margin-top: 30px;
+}
+
+#consultas-titulo {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-left: 8%;
+} 
+
+#consultas-titulo h3{
+  font-size: 2.5rem;
+}
+
+#consultas-left > p {
+  font-size: 1.6em;
+  margin-left: 8%;
+}
+
+#campo-nombre input {
+width: 90%;
+}
+
+#campo-mail input {
+width: 90%;
+}
+
+#campo-consulta textarea {
+width: 90%;
+}
+
+
+/* FOOTER */
+
+footer {
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  row-gap: 25px;
+  margin-left: 3vw;
+  margin-bottom: 20px;
+}
+
+#footer-left {
+  padding: 40px 15px 0px 30px;
+}
+
+#footer-left p {
+  font-weight: 100;
+}
+
+#footer-left input{
+  width: 92%;
+}
+
+
+#footer-right {
+  padding: 0px 0px 20px 0px;
+  text-align: center;
+  font-size: .65em;
+}
+
+#footer-right-info p{
+display: inline;
+}
+
+}
+
+/* --------------------------------------------------------------------------------
+MEDIA QUERYES - 400
+-------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 400px){
+.menu-navegacion{
+  margin-left: 1vw;
+}
+
+.menu-navegacion a{
+  font-size: 1em;
+  margin: 0px;
+}
+
+#logo{
+  height: 60px;
+  width: 100px;
+}
+
+#banner{
+  width: 94%;
+  height: 86vh;
+}
+
+#naming img {
+  width: 300px;
+}
+
+#bajada {
+  margin-top: 10px;
+  font-size: 1.25em;
+}
+  
+/* SERVICIOS */
+
+#item0 h3{
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+#container-s2{
+    grid-template-columns: 93%;
+    grid-template-rows: repeat(6, 200px);
+    row-gap: 3vh;
+}
+
+.imagenes {
+  height: 200px;
+}
+
+#item1, #item2, #item3, #item4, #item5, #item6 {
+  height: 200px;
+}
+/* FOOTER */
+
+#footer-left {
+  padding: 20px 15px 0px 30px;
+}
+
+#footer-right {
+  font-size: .65em;
+}
+
+#footer-right-info p{
+  display: block;
+  }
+
+}

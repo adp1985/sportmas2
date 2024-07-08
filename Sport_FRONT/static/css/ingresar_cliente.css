@@ -1,0 +1,116 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root {
+    --main-color1: #3C60DF;
+    --main-color2: #FF4550;
+    --main-color3: #605b64;
+    --main-color4: #FBB90D;
+    --main-color5: #E67555;
+    --main-color6: #CFCB88;
+    --body-fonts-1: "Oswald", sans-serif;
+    --body-fonts-2: "Cooper-Hewitt", sans-serif;
+}
+
+body {
+    background-image: linear-gradient(43deg, #fbb90d 0%, #e67555 46%, #cc89ff 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+}
+
+.container-form div img {
+    width: 40px; 
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.container-form  div  h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.container-form {
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-form form {
+    width: 60vh;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 5vh;
+}
+
+.entrada {
+    margin-bottom: 20px;
+}
+
+.entrada label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-family: "Cooper-Hewitt", sans-serif;
+    font-weight: 100;
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+}
+
+.entrada div {
+    margin-bottom: 20px;
+    font-family: "Cooper-Hewitt", sans-serif;
+    font-weight: 100;
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+}
+
+.entrada input[type="text"],
+.entrada input[type="email"],
+.entrada input[type="number"],
+.entrada textarea,
+.entrada input[list] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: "Cooper-Hewitt", sans-serif;
+    font-weight: 100;
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    box-sizing: border-box;
+}
+
+/* Alineación horizontal de checkbox y radio buttons */
+.entrada input[type="radio"],
+.entrada input[type="checkbox"] {
+    margin: 5px 10px; /* Espacio entre los elementos */
+    font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    vertical-align: middle; /* Alinear verticalmente */
+}
+
+.entrada input[type="radio"] + label,
+.entrada input[type="checkbox"] + label {
+    font-size: 0.9em; 
+    vertical-align: middle; /* Alinear verticalmente */
+}
+
+.guardar {
+    background-color: #3C60DF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Cooper-Hewitt", sans-serif;
+    width: 75px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.9em; 
+}

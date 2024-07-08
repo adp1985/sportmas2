@@ -1,0 +1,522 @@
+/* --------------------------------------------------------------------------------
+GENERAL
+-------------------------------------------------------------------------------- */
+
+*{
+    padding: 0px;
+    margin: 0px;;
+}
+
+:root {
+  --main-color1: #3C60DF;
+  --main-color2: #FF4550;
+  --main-color3: #CC89FF;
+  --main-color4: #FBB90D;
+  --main-color5: #E67555;
+  --main-color6: #CFCB88;
+  --body-fonts-1: "Oswald",  sans-serif;
+  --body-fonts-2: "Cooper-Hewitt",  sans-serif;
+}
+
+body{
+  background-color: white;
+}
+
+/* --------------------------------------------------------------------------------
+HEADER
+-------------------------------------------------------------------------------- */
+
+header {
+  display: flex;
+  z-index: 1000;
+  width: 100vw;
+  height: 10vh;
+  background: linear-gradient(45deg, #ff4551 0%, #B33039 95%);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3vw;  
+}
+
+.menu-navegacion{
+  padding-right: 7vw;
+}
+
+.menu-navegacion a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  margin: 0 20px;
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 100;
+}
+
+.menu-navegacion a:hover {
+  color: var(--main-color4);
+}
+
+#logo{
+  height: 80px;
+  width: 120px;
+}
+
+/* --------------------------------------------------------------------------------
+BODY
+-------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------
+SECTION 1 - BANNER
+-------------------------------------------------------------------------------- */
+
+#banner-quienessomos {
+  width: 93vw;
+  height: 86vh;
+  background-image: url(../img/banners/bannerquienessomos.png);
+  background-size: cover;
+  margin-top: 12vh;
+  margin-bottom: 3vh;
+  position: relative;
+  left: 3vw;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+#banner-quienessomos h1 {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 8rem;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  text-align: center;
+}
+
+#banner-quienessomos p{
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px black;
+  color: var(--main-color4);
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------------
+SECTION 2 - SERVICIOS
+-------------------------------------------------------------------------------- */
+
+.container-s2{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-s2 h2{
+  text-align: center;
+  font-family: var(--body-fonts-1);
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 15PX 0px 30px 0px;
+}
+
+.instructores{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.instructor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  background: linear-gradient(315deg, #cc8aff 0%, #744E91 95%);
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.instructor img{
+  max-width: 100%; /* La imagen nunca será más ancha que el contenedor */
+  max-height: 80%; /* La imagen nunca será más alta que el contenedor */
+  width: auto; /* Ancho automático para mantener la proporción */
+  height: auto; /* Alto automático para mantener la proporción */
+  display: block; /*Para evitar espacios en blanco debajo de la imagen*/
+  box-shadow: 2px -1px 5px rgb(56, 56, 56);
+  transition: transform 0.3s; /* Animación de la propiedad transform */
+}
+
+.instructor img:hover{
+  transform: scale(1.1); /* Hace un zoom del 10% cuando se pasa el cursor por encima */
+}
+
+.instructor p{
+  text-align: center;
+  padding: 10px;
+  font-family: "cooper-hewitt-light";
+}
+
+.nombre-instructor{
+  font-weight: bold;
+}
+
+.instructor h4{
+  text-align: center;
+  padding: 5px;
+  font-size: 1.5em;
+  font-family: var(--body-fonts-1);
+  font-weight: 300;
+}
+
+.imagenes {
+  position: relative; /* Establece la posición relativa para que los elementos absolutos se posicionen con respecto a este contenedor */
+  width: 100%;
+  height: 400px;
+}
+
+.texto-imagenes {
+  position: absolute; /* Establece la posición absoluta */
+  top: 50%; /* Posiciona el texto en la mitad superior de la imagen */
+  left: 50%; /* Posiciona el texto en la mitad izquierda de la imagen */
+  transform: translate(-50%, -50%); /* Centra el texto correctamente */
+  background-color: rgb(255, 255, 255, .7);
+  border-radius: 4%;
+  padding: 10px; /* Añade espacio alrededor del texto */
+  font-weight: bold; /* Hace que el texto sea más visible */
+  text-align: center;
+  font-size: 1.5em;
+  font-family: var(--body-fonts-1);
+  font-weight: 300;
+}
+
+
+/* --------------------------------------------------------------------------------
+SECTION 3 - CONSULTAS 
+-------------------------------------------------------------------------------- */
+#consultas {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  border: 1px solid black;
+  width: 93vw;
+  margin-top: 30px;
+  margin-left: 3vw;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: linear-gradient(45deg, #3c5fde 0%, #273E91 95%);
+}
+
+#consultas-titulo {
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 70px;
+  margin-left: 12%;
+} 
+
+#consultas-titulo h3{
+  text-align: left;
+  font-size: 3rem;
+  font-family: var(--body-fonts-1);
+  font-weight: 400;
+}
+
+#consultas-left > p {
+  font-family: var(--body-fonts-2);
+  font-size: 1.5em;
+  font-weight: 100;
+  margin-left: 12%;
+}
+
+
+#consultas-right{
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+  padding-left: 50px;
+}
+
+#campo-mail, #campo-consulta, #campo-enviar {
+  margin-top: 10px;
+}
+
+#campo-nombre input {
+  border: 1px solid red;
+  height: 30px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-mail input {
+  border: 1px solid red;
+  height: 30px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-consulta textarea {
+  border: 1px solid red;
+  height: 100px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-enviar input {
+  background-color: #FF4550;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 50px;
+  padding: 3px;
+}
+
+#campo-enviar input[type="submit"] {
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+}
+
+/*--------------------------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------------------------- */
+
+footer {
+  display: grid;
+  width: 93vw;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1;
+  margin-top: 30px;
+  margin-left: 3vw;
+  margin-bottom: 20px;
+  font-family: var(--body-fonts-2);
+  border: 1px solid black;
+  background-color: var(--main-color4);
+}
+
+#footer-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 20px 0px 20px 80px;
+}
+
+#footer-left p {
+  font-weight: 100;
+}
+
+#footer-left input{
+  font-family: var(--body-fonts-1);
+  font-weight: 300;
+  border: 1px solid red;
+  height: 30px;
+  width: 250px;
+  margin-top: 10px;
+}
+
+#footer-left input::placeholder {
+  font-family: var(--body-fonts-1);
+  padding: 5px;
+}
+
+#footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: right;
+  padding-right: 80px;
+  font-family: var(--body-fonts-2);
+  font-weight: 300;
+}
+
+#footer-right-mail::before {
+  content: url(../img/iconos/footer/mail.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+
+#footer-right-cel::before {
+  content: url(../img/iconos/footer/tel.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+
+#footer-right-ubic::before {
+  content: url(../img/iconos/footer/ubicacion.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+  
+
+/* --------------------------------------------------------------------------------
+CRÊDITOS
+-------------------------------------------------------------------------------- */
+
+#creditos {
+    font-family: var(--body-fonts-2);
+    font-weight: 100;
+    font-size: .7rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+/* --------------------------------------------------------------------------------
+FUENTES
+-------------------------------------------------------------------------------- */
+
+.oswald{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "cooper-hewitt-thin";
+  src: url(../../assets/fonts/cooper-hewitt/CooperHewitt-Thin.otf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "cooper-hewitt-medium";
+  src: url(../../assets/fonts/cooper-hewitt/CooperHewitt-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "cooper-hewitt-light";
+  src: url(../../assets/fonts/cooper-hewitt/CooperHewitt-Light.otf);
+  font-weight: 400;
+}
+
+/* MAX 700 */
+/* ------------------------------------------------------------ */
+
+@media only screen and (max-width: 700px){
+
+.menu-navegacion a {
+  margin: 0 10px;
+  font-size: 1.3rem;
+}
+
+.banner-quienessomos{
+  height: auto;
+}
+
+#banner-quienessomos h1{
+  font-size: 6rem;
+}
+
+#consultas {
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  row-gap: 30px;
+  margin-top: 30px;
+}
+
+#consultas-titulo {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-left: 8%;
+} 
+
+#consultas-titulo h3{
+  font-size: 2.5rem;
+}
+
+#consultas-left > p {
+  font-size: 1.6em;
+  margin-left: 8%;
+}
+
+#campo-nombre input {
+  width: 90%;
+}
+
+#campo-mail input {
+  width: 90%;
+}
+
+#campo-consulta textarea {
+  width: 90%;
+}
+
+
+/*-------- FOOTER --------------------*/
+
+footer {
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  row-gap: 25px;
+  margin-left: 3vw;
+  margin-bottom: 20px;
+}
+
+#footer-left {
+  padding: 40px 15px 0px 30px;
+}
+
+#footer-left p {
+  font-weight: 100;
+}
+
+#footer-left input{
+  width: 92%;
+}
+
+#footer-right {
+  padding: 0px 0px 20px 0px;
+  text-align: center;
+  font-size: .65em;
+}
+
+#footer-right-info p{
+  display: inline;
+}
+}
+
+/* MAX 400 */
+/* ------------------------------------------------------------ */
+
+@media only screen and (max-width: 400px){
+
+.menu-navegacion{
+  margin-left: 1vw;
+}
+
+.menu-navegacion a{
+  font-size: 1em;
+  margin: 0px;
+}
+
+#logo{
+  height: 60px;
+  width: 100px
+}
+
+#banner{
+  width: 94%;
+  height: 86vh;
+}
+#banner-quienessomos h1{
+  font-size: 5rem;
+}
+
+/* INSTRUCOTRES */
+
+.container-s2 h2{
+  font-size: 1.8rem;
+}
+
+/* FOOTER */
+
+#footer-right-info p{
+  display: block;
+}
+
+}

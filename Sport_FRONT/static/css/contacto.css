@@ -1,0 +1,767 @@
+/* --------------------------------------------------------------------------------
+GENERAL
+-------------------------------------------------------------------------------- */
+
+*{
+    padding: 0px;
+    margin: 0px;;
+}
+
+
+
+:root {
+  --main-color1: #3C60DF;
+  --main-color2: #FF4550;
+  --main-color3: #CC89FF;
+  --main-color4: #FBB90D;
+  --main-color5: #E67555;
+  --main-color6: #CFCB88;
+  --body-fonts-1: "Oswald",  sans-serif;
+  --body-fonts-2: "Cooper-Hewitt",  sans-serif;
+}
+
+/* --main-color1: rgba(60, 96, 223, 1);
+--main-color2: rgba(255, 69, 80, 1);
+--main-color3: rgba(204, 137, 255, 1);
+--main-color4: rgba(251, 185, 13, 1);
+--main-color5: rgba(230, 117, 85, 1);
+--main-color6: rgba(207, 203, 136, 1); */
+
+body{
+  background-color: white;
+}
+
+/* --------------------------------------------------------------------------------
+HEADER
+-------------------------------------------------------------------------------- */
+
+header {
+    display: flex;
+    z-index: 1000;
+    width: 100vw;
+    height: 10vh;
+    /* background-color: #ff4551; */
+    background: linear-gradient(45deg, #ff4551 0%, #B33039 95%);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3vw;  
+}
+.menu-navegacion{
+  padding-right: 7vw;
+}
+
+.menu-navegacion a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  margin: 0 20px;
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 100;
+}
+
+.menu-navegacion a:hover {
+  color: var(--main-color4);
+}
+
+#logo{
+  height: 80px;
+  width: 120px;
+}
+
+/* --------------------------------------------------------------------------------
+BODY
+-------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------
+SECTION 1 - BANNER
+-------------------------------------------------------------------------------- */
+
+#banner-contacto {
+    width: 93vw;
+    height: 86vh;
+    background-image: url(../img/banners/bannercontacto.png);
+    background-size: cover;
+    margin-top: 12vh;
+    margin-bottom: 3vh;
+    position: relative;
+    left: 3vw;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#banner-contacto h1 {
+    font-family: "Oswald";
+    font-weight: 400;
+    font-size: 8rem;
+    text-shadow: 1px 1px 1px black;
+    color: white;
+    text-align: center;
+}
+
+#banner-contacto p{
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px black;
+  color: var(--main-color4);
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------------
+SECTION 2 - FORMULARIO
+-------------------------------------------------------------------------------- */
+
+  #consultas-container {
+    display: flex;
+    border: 1px solid black;
+    width: 93vw;
+    gap: 50px;
+    margin-top: 30px;
+    margin-left: 3vw;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    /* background-color: var(--main-color1); */
+    background: linear-gradient(45deg, #3c5fde 0%, #273E91 95%);
+
+  } 
+
+#cc-left{
+  width: 45%;
+}
+
+#cc-left h3 {
+  font-size: 3rem;
+  font-family: var(--body-fonts-1);
+  font-weight: 400;
+  padding-left: 35px;
+  margin-top: -15px;
+  }
+  
+#cc-left p {
+  font-family: var(--body-fonts-2);
+  font-size: 1.5em;
+  font-weight: 100;
+  padding-left: 35px;
+  }
+  
+  #cc-right{
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  }
+
+  #form-consultas {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  h4 {
+    font-size: 1rem;
+    font-family: var(--body-fonts-2);
+    font-weight: 100;
+  }
+  
+  .campo-form-1 input {
+  border: 1px solid red;
+  height: 30px;
+  width: 70%;
+  margin: 10px 0px;
+  font-weight: 200;
+  }
+
+  .campo-form-1 input[type="radio"]  {
+    height: 20px;
+    width: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer; 
+    border: 1px solid var(--main-color2); 
+    }
+
+    .campo-form-1 input[type="checkbox"]  {
+        height: 20px;
+        width: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        cursor: pointer; 
+        border: 1px solid red;
+        }
+
+.campo-form-1 input[type="file"]  {
+            height: 20px;
+            height: 30px;
+            width: 70%;
+            margin: 10px 0px;
+            border: none;
+            }
+
+  .campo-form-1 textarea {
+    border: 1px solid red;
+    height: 100px;
+    width: 70%;
+    margin: 10px 0px;
+    }
+
+
+.campo-form-2 {
+    display: inline-block;
+    margin-top: 10px;
+}
+  
+  .campo-form-2 input {
+  background-color: #FF4550;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 50px;
+  padding: 3px;
+  }
+  
+  .campo-form-2 input[type="submit"] {
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+  cursor: pointer; 
+  }
+
+  .formnegrita {
+    font-weight: 400;
+  }
+
+#resultado {
+  margin-top: 10px;
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+  color: var(--main-color4);
+}
+
+/* --------------------------------------------------------------------------------
+SECTION - MAPA Y REDES 
+-------------------------------------------------------------------------------- */
+
+#ubicacion-container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid black;
+    width: 93vw;
+    grid-auto-rows: max-content;
+    margin-top: 30px;
+    margin-left: 3vw;
+    /* background-color: var(--main-color3); */
+    background: linear-gradient(45deg, #cc8aff 0%, #744E91 95%);
+}
+
+#mapa {
+    width: 90%;
+    height: 100%;
+    border: 0;
+}
+ 
+#ubicacion-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding:20px 0px 20px 00px;
+}
+
+#ubicacion-right h3 {
+  font-size: 3rem;
+  font-family: var(--body-fonts-1);
+  font-weight: 400;
+  }
+
+  
+  #ubicacion-right-info p{
+  margin-bottom: 0; 
+  padding-top: 3px;
+  font-family: "Oswald";
+  font-weight: 200;
+  font-size: 1.5rem;
+  }
+
+  #ubicacion-right-redes {
+    padding-top: 3px;
+    }
+
+  #ubicacion-right-redes img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #ubicacion-right-mail::before {
+    margin-right: 10px;
+    content: url(../img/iconos/footer/mail.png);
+    vertical-align: middle; 
+    display: inline-block; 
+  }
+  
+  #ubicacion-right-cel::before {
+    margin-right: 10px;
+    content: url(../img/iconos/footer/tel.png);
+    vertical-align: middle; 
+    display: inline-block; 
+  }
+  
+    #ubicacion-right-ubic::before {
+    margin-right: 10px;
+    content: url(../img/iconos/footer/ubicacion.png);
+    vertical-align: middle; 
+    display: inline-block; 
+  }
+  
+/* --------------------------------------------------------------------------------
+SECTION - FAQ
+-------------------------------------------------------------------------------- */
+#faq {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    border: 1px solid black;
+    width: 93vw;
+    gap: 10px;
+    margin-top: 30px;
+    margin-left: 3vw;
+    background-color: var(--main-color5);
+    background: linear-gradient(45deg, #E67555 0%, #853e2a 95%);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#faq-left h3{
+    font-size: 3rem;
+    font-family: var(--body-fonts-1);
+    font-weight: 400;
+    padding-left: 35px;
+}
+
+#faq-right {
+    width: 80%;
+    font-family: "Oswald";
+}
+
+#faq-right a{
+    color: black;
+    text-decoration: none;
+}
+
+#faq-right a:hover {
+    color: var(--main-color4);
+}
+
+#faq-right hr {
+    border: 1px solid black;
+    margin-top: 15px;
+}
+
+.faq-pregunta {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 16px;
+font-weight: 300;
+font-size: 1.3rem;
+margin-top: 10px;
+}
+
+.faq-pregunta img{
+    margin-left: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.faq-respuesta {
+    font-weight: 100;
+    font-size: 1rem;
+    padding-top: 10px;
+    text-align:left;
+    display: none;
+}
+
+.faq-respuesta:target {
+    display: block;
+} 
+
+.faq-respuesta :nth-child(3) a{
+    color: var(--main-color4);
+}
+
+/*--------------------------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------------------------- */
+
+footer {
+  display: grid;
+  width: 93vw;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1;
+  margin-top: 30px;
+  margin-left: 3vw;
+  margin-bottom: 20px;
+  font-family: var(--body-fonts-2);
+  border: 1px solid black;
+  background-color: var(--main-color4);
+ 
+}
+
+#footer-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 20px 0px 20px 40px;
+}
+
+#footer-left p {
+  font-weight: 100;
+}
+
+#footer-left input{
+  font-family: var(--body-fonts-1);
+  font-weight: 300;
+  border: 1px solid red;
+  height: 30px;
+  width: 250px;
+  margin-top: 10px;
+}
+
+#footer-left input::placeholder {
+  font-family: var(--body-fonts-1);
+  padding: 5px;
+}
+
+#footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: right;
+  padding-right: 80px;
+  font-family: var(--body-fonts-2);
+  font-weight: 300;
+}
+  
+  
+/* --------------------------------------------------------------------------------
+CRÊDITOS
+-------------------------------------------------------------------------------- */
+
+#creditos {
+    font-family: var(--body-fonts-2);
+    font-weight: 100;
+    font-size: .7rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+/* --------------------------------------------------------------------------------
+FUENTES
+-------------------------------------------------------------------------------- */
+
+.oswald{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+/* ------------------------------------------------------------ */
+/* MEDIA QUERIES */
+/* ------------------------------------------------------------ */
+
+
+
+/* MAX 700 */
+/* ------------------------------------------------------------ */
+
+
+@media only screen and (max-width: 700px){
+
+  .menu-navegacion a {
+    margin: 0 10px;
+    font-size: 1.3rem;
+  }
+
+#banner-contacto {
+    height: 65vh;
+  }
+
+#banner-contacto h1{
+    font-size: 5rem;
+  }
+
+#banner-contacto p{
+    font-size: 1.5rem;
+  }
+
+#consultas-container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+  } 
+
+#cc-left{
+  text-align: center;
+  width: 80%;
+}
+
+#cc-left h3 {
+  font-size: 2rem;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-left: 0px;
+  }
+  
+#cc-left p {
+  font-size: 1.2em;
+  padding-left: 0px;
+  }
+
+#cc-right{
+    width: 80%;
+  }
+  
+h4 {
+  font-size: .90rem;
+}
+label {
+  font-size: .90rem;
+}
+
+.campo-form-2 input {
+font-size: .90rem;
+  }
+
+.campo-form-1 input[type="file"]  {
+  margin: 10px 0px 0px 0px;
+}
+
+ #ubicacion-right {
+  padding:20px 20px 20px 0px;
+}
+
+#ubicacion-right h3 {
+  padding: 0px;
+  font-size: 1.75rem;
+}
+
+#ubicacion-right-info p{
+  font-size: 1.2rem;
+}
+
+#faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#faq-left{
+  text-align: center;
+}
+
+#faq-left h3{
+  font-size: 2rem;
+  padding-left: 0px;
+}
+#faq-right {
+  width: 80%;
+  }
+
+.faq-pregunta {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+.faq-respuesta {
+  font-size: .90rem;
+}
+
+#faq-right hr {
+  border: .7px solid black;
+  margin-top: 15px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+}
+
+#footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+#footer-left p {
+  font-weight: 100;
+  text-align: center;
+}
+
+#footer-left input{
+  width: 100%;
+}
+
+
+}
+
+/* MAX 400 */
+/* ------------------------------------------------------------ */
+
+
+@media only screen and (max-width: 400px){
+
+.menu-navegacion{
+  margin-left: 1vw;
+}
+
+.menu-navegacion a{
+  font-size: 1em;
+  margin: 0px;
+}
+#banner-contacto {
+  height: 55vh;
+}
+  
+#banner-contacto h1{
+  font-size: 3rem;
+}
+
+#banner-contacto p{
+  font-size: 1.1rem;
+}
+
+#consultas-container {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+} 
+
+#cc-left{
+  text-align: center;
+  width: 80%;
+}
+
+#cc-left h3 {
+  font-size: 1.5rem;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-left: 0px;
+}
+  
+#cc-left p {
+  font-size: .8em;
+  padding-left: 0px;
+}
+
+#cc-right{
+    width: 80%;
+  }
+  
+h4 {
+  font-size: .70rem;
+}
+label {
+  font-size: .70rem;
+}
+
+.campo-form-2 input {
+font-size: .70rem;
+}
+
+.campo-form-1 input[type="file"]  {
+  margin: 10px 0px 0px 0px;
+}
+
+#ubicacion-right {
+  padding:20px 20px 20px 0px;
+}
+
+#ubicacion-right h3 {
+  padding: 0px;
+  font-size: 1.5rem;
+}
+
+#ubicacion-right-info p{
+  font-size: .9rem;
+}
+
+#ubicacion-right-redes img {
+  width: 30px;
+  height: 30px;
+}
+
+#faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#faq-left{
+  text-align: center;
+}
+
+#faq-left h3{
+  font-size: 1.5rem;
+  padding-left: 0px;
+}
+#faq-right {
+  width: 80%;
+}
+
+.faq-pregunta {
+  font-size: .8rem;
+  margin-top: 10px;
+}
+
+.faq-respuesta {
+  font-size: .70rem;
+}
+
+#faq-right hr {
+  border: .7px solid black;
+  margin-top: 15px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+}
+
+#footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px;
+}
+
+#footer-left p {
+  font-weight: 100;
+  text-align: center;
+  font-size: .8rem;
+}
+
+#footer-left input{
+  width: 100%;
+}
+
+
+}
+   

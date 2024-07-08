@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/contacto.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/img/iconos/s3favicon.ico" type="image/x-icon">
+
+    <title>Sport+ | Contacto</title>
+</head>
+<body>
+
+<header>
+    <div class="logo-Sport+">
+        <a href="../index.html"><img id="logo" src="../static/img/Logos/s3.png" alt="logo"></a>
+    </div>
+    <nav class ="menu-navegacion">
+            <a href="../index.html">INICIO</a>
+            <a href="quienes-somos.html">QUIÉNES SOMOS</a>
+            <a href="servicios.html">SERVICIOS</a>
+            <a href="contacto.html">CONTACTO</a>
+            <a href="../templates/admin/tabla_clientes.html">ADMIN</a>
+    </nav>
+</header>
+
+<main>
+
+<section id="banner-contacto">
+        <h1>CONTACTO</h1>
+        <p>¡Comunicate hoy y empezá tu viaje hacia un estilo de vida más saludable!</p>
+</section>
+
+<section id="consultas-container">
+
+    <div id="cc-left">
+        
+        <div>
+            <h3>INSCRIBITE ONLINE</h3>
+        </div>
+        
+        <p>
+        Completá los datos y nos pondremos en contacto contigo a la brevedad.
+        </p>
+
+    </div>
+
+    <div id="cc-right">
+       
+        <form id="form-contacto" name="Contacto" method="post">
+           
+            <div class="campo-form-1">
+                <div>
+                <label class="formnegrita" for="nombre">Nombre y apellido </label>
+                </div>
+                <input type="text" name="nombre" id="nombre" >  
+             </div>
+            
+            <div class="campo-form-1">
+                <div>
+                <label class="formnegrita" for="mail">Email </label>
+                </div>
+                <input type="email" name="mail" id="mail" >
+            </div>
+           
+            <div class="campo-form-1">
+                <div>
+                <label class="formnegrita" for="tel">Teléfono (sin guiones ni +54 ni 0 al comienzo) </label>
+                </div>
+                <input type="number" name="tel" id="tel" >
+            </div>
+
+            <div class="campo-form-1"> <!-- RADIO BUTTON -->
+
+                <h4 class="formnegrita">Género</h4>
+
+                <input type="radio" name="genero" id="mujer" value="Mujer" >
+                <label for="mujer">Mujer</label>
+
+                <input type="radio" name="genero" id="hombre" value="Hombre" >
+                <label for="hombre">Hombre</label>
+
+                <input type="radio" name="genero" id="otro" value="Otro" >
+                <label for="otro">Otro</label>
+
+            </div>
+
+            <div class="campo-form-1"> <!-- CHECKBOX -->
+
+                <div>
+                    
+                    <h4 class="formnegrita">Servicios</h4>
+
+                    <input type="checkbox" name="servicios" id="boxeo" value="boxeo">
+                    <label for="boxeo">Boxeo</label>
+
+                    <input type="checkbox" name="servicios" id="funcional" value="funcional">
+                    <label for="funcional">Funcional</label>
+
+                    <input type="checkbox" name="servicios" id="pilates" value="pilates">
+                    <label for="pilates">Pilates</label>
+
+                    <input type="checkbox" name="servicios" id="spinning" value="spinning">
+                    <label for="spinning">Spinning</label>
+
+                    <input type="checkbox" name="servicios" id="yoga" value="yoga">
+                    <label for="yoga">Yoga</label>
+
+                    <input type="checkbox" name="servicios" id="zumba" value="zumba">
+                    <label for="zumba">Zumba</label>
+                </div>
+            </div>
+
+            <div class="campo-form-1"> <!-- SELECT -->
+                <h4 class="formnegrita">Plan</h4>
+
+                <input list="lista-plan" id="plan" name="plan" required>
+                <datalist id="lista-plan">
+                    <option value="Diamante">Diamante</option>
+                    <option value="Oro">Oro</option>
+                    <option value="Plata">Plata</option>
+                    <option value="Bronce">Bronce</option>
+                </datalist>
+            </div>
+
+            <div class="campo-form-1">
+                <div>
+                    <label class="formnegrita" for="consulta-textarea">Observaciones/Consulta</label>
+                </div>
+                <textarea name="consulta" id="consulta-textarea"></textarea>
+            </div>
+
+            <div class="campo-form-1">
+                <div>
+                    <label class="formnegrita" for="aptofisico" >¿Posee apto físico?</label>
+                </div>
+                <input list="tieneAptoFisico" id="aptofisico" name="aptofisico" required>
+                <datalist id="tieneAptoFisico">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </datalist>
+            </div>
+
+
+           <div class="campo-form-2">
+                <input type="submit" value="Enviar">
+            </div>
+
+            <div class="campo-form-2">
+                <input type="submit" value="Borrar">
+            </div>
+
+            <div id="resultado">
+            </div>
+        </form>
+  
+    </div>
+
+</section>
+
+<section id="ubicacion-container"> 
+
+    <div id="ubicacion-left">
+        <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.1771440233697!2d-58.403482610064685!3d-34.59968183869774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca93c1a4ba2f%3A0xc090275355c47982!2sAv.%20C%C3%B3rdoba%202456%2C%20C1120AAT%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1714571326368!5m2!1ses-419!2sar"></iframe>
+    </div>
+
+    <div id="ubicacion-right">
+        <div class="cajadetitulos">
+            <h3>SEGUINOS EN LAS REDES</h3>
+        </div>
+        <div id="ubicacion-right-redes">
+            <a href="https://www.instagram.com" target="_blank"><img src="../static/img/iconos/contacto/instagram.png" alt="instagram"></a>
+            <a href="https://www.twitter.com" target="_blank"> <img src="../static/img/iconos/contacto/twitter.png" alt="twitter"></a>
+            <a href="https://www.youtube.com" target="_blank"><img src="../static/img/iconos/contacto/youtube.png" alt="youtube"></a>
+        </div>
+        <div id="ubicacion-right-info">
+            <p id="ubicacion-right-mail">info@sportmas.com</p>
+            <p id="ubicacion-right-cel">11-2399-7732</p>
+            <p id="ubicacion-right-ubic">Av. Córdoba 2456, CABA</p>
+        </div>
+    </div>
+
+</section>
+
+<section id="faq"> 
+
+    <div id="faq-left">
+        <h3>PREGUNTAS FRECUENTES</h3>
+    </div>
+
+    <div id="faq-right">
+        <div>
+            <p class="faq-pregunta"><a href="#respuesta1">¿Cuáles son los horarios de apertura y cierre del gimnasio<img src="../static/img/iconos/contacto/arrowDown.svg" alt="flechaabajo"></a></p>
+            <p class="faq-respuesta" id="respuesta1">Nuestro gimnasio está abierto de lunes a viernes de 8 a 22, y los sábados de 8 a 17.</p>
+        </div>
+        <hr>
+        <div>
+            <p class="faq-pregunta"><a href="#respuesta2">¿Qué tipos de suscripciones ofrecen y cuáles son sus costos?<img src="../static/img/iconos/contacto/arrowDown.svg" alt="flechaabajo"></a></p>
+            <p class="faq-respuesta" id="respuesta2">Ofrecemos una variedad de opciones de membresía para adaptarnos a tus necesidades y presupuesto, incluidos planes anuales y mensuales. Para conocer más sobre nuestros precios y las opciones disponibles, por favor visita nuestra sección de <a href="servicios.html">Servicios</a></p>
+        </div>
+        <hr>
+        <div>
+            <p class="faq-pregunta"><a href="#respuesta3">¿Necesito el apto médico para empezar a entrenar?<img src="../static/img/iconos/contacto/arrowDown.svg" alt="flechaabajo"></a></p>
+            <p class="faq-respuesta" id="respuesta3">Tu apto médico vigente es obligatorio al momento de iniciar una actividad física. Según la ley 139 art. 3 en decreto reglamentario Nº 1821, art. 6: (para Capital Federal) y la ley 12329 art. 9 (para la provincia de Bs. As.) es obligatorio tener el apto médico al día para ingresar a nuestras instalaciones.</p>
+        </div>
+        <hr>
+        <div>
+            <p class="faq-pregunta"><a href="#respuesta4">¿Cómo se abona la cuota?<img src="../static/img/iconos/contacto/arrowDown.svg" alt="flechaabajo"></a></p>
+            <p class="faq-respuesta" id="respuesta4">En un plan mensual, el primer cargo en tu cuenta se genera al momento de tu alta y corresponde al primer mes de vigencia de tu Plan. La vigencia se renueva de forma automática cada mes el mismo día en el que te diste de alta. <br>
+            El plan anual se paga una única vez y el monto será distribuido en el número de cuotas que selecciones al momento de realizar la compra.</p>
+        </div>
+        <hr>
+        <div>
+            <p class="faq-pregunta"><a href="#respuesta5">¿Cómo hago un reclamo?<img src="../static/img/iconos/contacto/arrowDown.svg" alt="flechaabajo"></a></p>
+            <p class="faq-respuesta" id="respuesta5">Para realizar un reclamo, completá el formulario de contacto que se encuentra en esta página y un asesor se comunicará con vos.</p>
+        </div>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <div id="footer-left">
+   
+        <p>
+        Suscribite para recibir nuestras novedades
+        </p>
+       
+        <form name="newsletter" id="newsletter"  method="post">
+         <div>
+            <input type="email" name="correo" id="correo" placeholder="Escribí tu correo acá" required> 
+         </div>
+         <div id="newsletter-enviar">
+            <input type="submit" value="Enviar">    
+        </div>
+         </form>
+    </div>
+</footer>
+
+<div id="creditos">
+<p>© 2024 Fullstack Python Codo a Codo - Diseño y desarrollo: Sebastián - Lucas - Alejandro</p>
+</div>
+
+<script src="../static/js/formulario-contacto.js"></script>
+<script src="../static/js/newsletter.js"></script>
+</body>
+</html>

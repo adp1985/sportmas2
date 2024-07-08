@@ -1,0 +1,638 @@
+/* --------------------------------------------------------------------------------
+GENERAL
+-------------------------------------------------------------------------------- */
+
+*{
+    padding: 0px;
+    margin: 0px;;
+}
+
+:root {
+  --main-color1: #3C60DF;
+  --main-color2: #FF4550;
+  --main-color3: #CC89FF;
+  --main-color4: #FBB90D;
+  --main-color5: #E67555;
+  --main-color6: #CFCB88;
+  --body-fonts-1: "Oswald",  sans-serif;
+  --body-fonts-2: "Cooper-Hewitt",  sans-serif;
+}
+
+body{
+  background-color: white;
+}
+
+/* --------------------------------------------------------------------------------
+HEADER
+-------------------------------------------------------------------------------- */
+
+header {
+  display: flex;
+  z-index: 1000;
+  width: 100vw;
+  height: 10vh;
+  /* background-color: #ff4551; */
+  background: linear-gradient(45deg, #ff4551 0%, #B33039 95%);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3vw;  
+}
+
+.menu-navegacion{
+  padding-right: 7vw;
+}
+
+.menu-navegacion a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px black;
+  margin: 0 20px;
+  font-size: 1.5em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 100;
+}
+
+.menu-navegacion a:hover {
+  color: var(--main-color4);
+}
+
+#logo{
+  height: 80px;
+  width: 120px;
+}
+
+/* --------------------------------------------------------------------------------
+BODY
+-------------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------------
+SECTION 1 - BANNER
+-------------------------------------------------------------------------------- */
+
+#banner-servicios {
+  width: 93vw;
+  height: 86vh;
+  background-image: url(../img/banners/bannerservicios.png);
+  background-size: cover;
+  margin-top: 12vh;
+  margin-bottom: 3vh;
+  position: relative;
+  left: 3vw;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+#banner-servicios h1 {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 8rem;
+  text-shadow: 1px 1px 1px black;
+  color: white;
+  text-align: center;
+}
+
+#banner-servicios p{
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px black;
+  color: var(--main-color4);
+  text-align: center;
+}
+
+
+/* --------------------------------------------------------------------------------
+SECTION 2 - HORARIOS
+-------------------------------------------------------------------------------- */
+.seccion-horarios h2{
+  text-align: center;
+  font-family: var(--body-fonts-1);
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.seccion-horarios{
+  background: linear-gradient(45deg, #cc8aff 0%, #744E91 95%);
+  width: 93vw;
+  height: auto;
+  padding-bottom: 20px;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+  position: relative;
+  left: 3vw;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+table {
+  width: 80%;
+  max-width: 100%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: var(--main-color2); /* Color de fondo rojo */
+  color: black;
+  text-align: center;
+  font-family: "Oswald";
+  font-weight: 400;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+/* --------------------------------------------------------------------------------
+SECTION 3 - PLANES Y PRECIOS
+-------------------------------------------------------------------------------- */
+
+.seccion-planes-y-precios {
+  text-align: center;
+  background-color: var(--main-color5);
+  background: linear-gradient(45deg, #E67555 0%, #853e2a 95%);
+  width: 93vw;
+  margin-top: 30px;
+  position: relative;
+  left: 3vw;
+  border: 1px solid black;
+  font-family: var(--body-fonts-2);
+}
+
+.seccion-planes-y-precios h2 {
+  text-align: center;
+  font-family: var(--body-fonts-1);
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 15PX 0px 30px 0px;
+
+}
+
+.plan-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background-color: white;
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.plan:hover {
+  transform: translateY(-10px);
+}
+
+.plan-titulo {
+  padding: 20px;
+  border-radius: 5px 5px 0 0;
+}
+
+.plan-titulo h3 {
+  margin: 0;
+}
+
+.plan-descripcion {
+  padding: 20px;
+  text-align: center;
+}
+
+.plan-precio {
+  padding: 17px;
+  border-radius: 0 0 5px 5px;
+}
+
+/* Colores según categoría */
+
+.plan-bronce .plan-titulo {
+  background-color: #cd7f32; /* Bronce */
+  color: black;
+}
+
+.plan-plata .plan-titulo {
+  background-color: #c0c0c0; /* Plata */
+  color: black;
+}
+
+.plan-oro .plan-titulo {
+  background-color: #ffd700; /* Oro */
+  color: black;
+}
+
+.plan-diamante .plan-titulo {
+  background-color: #4169e1; /* Diamante */
+  color: black;
+}
+
+.plan-bronce .plan-precio {
+  background-color: #cd7f32; /* Bronce */
+  color: black;
+}
+
+.plan-plata .plan-precio {
+  background-color: #c0c0c0; /* Plata */
+  color: black;
+}
+
+.plan-oro .plan-precio {
+  background-color: #ffd700; /* Oro */
+  color: black;
+}
+
+.plan-diamante .plan-precio {
+  background-color: #4169e1; /* Diamante */
+  color: black;
+}
+
+.plan-precio p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------------
+SECTION 4 - CONSULTAS 
+-------------------------------------------------------------------------------- */
+
+#consultas {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  border: 1px solid black;
+  width: 93vw;
+  margin-top: 30px;
+  margin-left: 3vw;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background: linear-gradient(45deg, #3c5fde 0%, #273E91 95%);
+
+}
+
+#consultas-titulo {
+  width: 100%;
+  padding-top: 20px;
+  margin-top: 70px;
+  margin-left: 12%;
+} 
+
+#consultas-titulo h3{
+  text-align: left;
+  font-size: 3rem;
+  font-family: var(--body-fonts-1);
+  font-weight: 400;
+}
+
+#consultas-left > p {
+  font-family: var(--body-fonts-2);
+  font-size: 1.5em;
+  font-weight: 100;
+  margin-left: 12%;
+
+}
+
+#consultas-right{
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+  padding-left: 50px;
+}
+
+#campo-mail, #campo-consulta, #campo-enviar {
+  margin-top: 10px;
+}
+
+#campo-nombre input {
+  border: 1px solid red;
+  height: 30px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-mail input {
+  border: 1px solid red;
+  height: 30px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-consulta textarea {
+  border: 1px solid red;
+  height: 100px;
+  width: 70%;
+  margin-top: 10px;
+}
+
+#campo-enviar input {
+  background-color: #FF4550;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  width: 50px;
+  padding: 3px;
+}
+
+#campo-enviar input[type="submit"] {
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+}
+
+
+/*--------------------------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------------------------- */
+
+footer {
+  display: grid;
+  width: 93vw;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1;
+  margin-top: 30px;
+  margin-left: 3vw;
+  margin-bottom: 20px;
+  font-family: var(--body-fonts-2);
+  border: 1px solid black;
+  background: linear-gradient(45deg, #FAB70C 0%, #CC950A 95%);
+}
+
+#footer-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding: 20px 0px 20px 80px;
+}
+
+#footer-left p {
+  font-weight: 100;
+}
+
+#footer-left input{
+  font-family: var(--body-fonts-1);
+  font-weight: 300;
+  border: 1px solid red;
+  height: 30px;
+  width: 250px;
+  margin-top: 10px;
+}
+
+#footer-left input::placeholder {
+  font-family: var(--body-fonts-1);
+  padding: 5px;
+}
+
+#footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: right;
+  padding-right: 80px;
+  font-family: var(--body-fonts-2);
+  font-weight: 300;
+}
+
+#footer-right-mail::before {
+  content: url(../img/iconos/footer/mail.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+
+#footer-right-cel::before {
+  content: url(../img/iconos/footer/tel.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+
+#footer-right-ubic::before {
+  content: url(../img/iconos/footer/ubicacion.png);
+  vertical-align: middle; 
+  display: inline-block; 
+  margin-right: 5px;
+}
+
+/* --------------------------------------------------------------------------------
+CRÊDITOS
+-------------------------------------------------------------------------------- */
+
+#creditos {
+  font-family: var(--body-fonts-2);
+  font-weight: 100;
+  font-size: .7rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------------
+FUENTES
+-------------------------------------------------------------------------------- */
+
+.oswald{
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+/* --------------------------------------------------------------------------------
+MEDIA QUERYES - 700
+-------------------------------------------------------------------------------- */
+
+
+/* Media Query para pantallas con un ancho máximo de 700px */
+@media screen and (max-width: 700px){
+
+.menu-navegacion a {
+  margin: 0 10px;
+  font-size: 1.3rem;
+}
+
+#banner-servicios {
+  height: 65vh;
+}
+
+#banner-servicios h1{
+  font-size: 5rem;
+}
+
+#banner-servicios p{
+  font-size: 1.5rem;
+}
+/* --------------------------------------------------------------------------------
+SECTION 2 - HORARIOS
+-------------------------------------------------------------------------------- */
+table {
+  font-size: 0.9rem; /* Ajustar el tamaño de fuente para dispositivos medianos */
+  overflow-x: auto; /* Permitir desplazamiento horizontal si es necesario */
+  display: block; /* Cambiar a un tipo de visualización de bloque para permitir el desplazamiento horizontal */
+}
+
+th, td {
+  min-width: 100px; /* Establecer un ancho mínimo para las celdas */
+  white-space: nowrap; /* Evitar el salto de línea en el texto dentro de las celdas */
+}
+
+.scroll-indicator {
+  text-align: center;
+  font-size: 1.7rem;
+  color: black;
+  margin-top: 10px;
+  display: block;
+  font-family: "Oswald";
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------------
+SECTION 4 - CONSULTAS 
+-------------------------------------------------------------------------------- */
+
+#consultas {
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  row-gap: 30px;
+  margin-top: 30px;
+  
+}
+
+#consultas-titulo {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-left: 8%;
+} 
+
+#consultas-titulo h3{
+  font-size: 2.5rem;
+}
+
+#consultas-left > p {
+  font-size: 1.6em;
+  margin-left: 8%;
+}
+
+#campo-nombre input {
+  width: 90%;
+}
+
+#campo-mail input {
+  width: 90%;
+}
+
+#campo-consulta textarea {
+  width: 90%;
+}
+    
+    
+/*--------------------------------------------------------------------------------
+FOOTER
+-------------------------------------------------------------------------------- */
+
+footer {
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  row-gap: 25px;
+  margin-left: 3vw;
+  margin-bottom: 20px;
+}
+
+#footer-left {
+  padding: 40px 15px 0px 30px;
+}
+
+#footer-left p {
+  font-weight: 100;
+}
+
+#footer-left input{
+  width: 92%;
+}
+
+#footer-right {
+  padding: 0px 0px 20px 0px;
+  text-align: center;
+  font-size: .65em;
+}
+
+#footer-right-info p{
+  display: inline;
+}
+
+}      
+
+
+/* MAX 400 */
+/* ------------------------------------------------------------ */
+
+
+@media screen and (max-width: 400px){
+
+.menu-navegacion{
+  margin-left: 1vw;
+}
+
+.menu-navegacion a{
+  font-size: 1em;
+  margin: 0px;
+}
+
+#banner-servicios {
+  height: 55vh;
+}
+
+#banner-servicios h1{
+  font-size: 3rem;
+}
+
+#banner-servicios p{
+  font-size: 1.1rem;
+}
+
+#consultas-container {
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+}
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+}
+
+#footer-left {
+  padding: 20px 15px 0px 30px;
+}
+
+#footer-right {
+  font-size: .65em;
+}
+
+#footer-right-info p{
+  display: block;
+}
+
+}
+
+@media screen and (min-width: 701px) {
+  .scroll-indicator {
+  display: none; /* Ocultar el mensaje en dispositivos más grandes */
+}
+}
+
